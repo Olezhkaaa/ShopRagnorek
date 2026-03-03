@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CartWindow</class>
+ <widget class="QDialog" name="CartWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Корзина</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>400</width>
+     <height>300</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string>
+     QWidget {
+        background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, 
+                                    stop:0 #20b2aa, stop:1 #6a0dad);
+        font-family: Arial, sans-serif;
+     }
+     QLabel {
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+     }
+     QVBoxLayout {
+        margin: 20px;
+     }
+     QScrollArea {
+        border: none;
+     }
+     QListWidget {
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 14px;
+        color: #333;
+        margin: 10px;
+        spacing: 10px;
+        height: 180px;
+     }
+     QListWidget::item {
+        padding: 10px 5px;
+        height: 40px;   /* Добавлено для установки высоты элемента */
+     }
+     QPushButton {
+        background-color: #20b2aa;
+        color: white;
+        font-size: 14px;
+        border-radius: 10px;
+        padding: 8px;
+        border: 2px solid white;
+        width: 30px;
+        height: 30px;
+     }
+     QPushButton:hover {
+        background-color: #008b8b;
+        border: 2px solid #ffffff;
+     }
+     .clear-cart {
+        background-color: #ff6347;
+     }
+     .clear-cart:hover {
+        background-color: #e74c3c;
+     }
+    </string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="cartTitle">
+      <property name="text">
+       <string>Корзина</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QListWidget" name="itemsList"/>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="bottomBar">
+      <item>
+       <widget class="QLabel" name="totalSumLabel">
+        <property name="text">
+         <string>Сумма: 0 ₽</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="buyButton">
+        <property name="text">
+         <string>Купить</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="clearCartButton">
+        <property name="styleSheet">
+         <string>
+          .clear-cart {
+             background-color: #ff6347;
+          }
+          .clear-cart:hover {
+             background-color: #e74c3c;
+          }
+         </string>
+        </property>
+        <property name="text">
+         <string>Очистить корзину</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EditProductDialog</class>
+ <widget class="QDialog" name="EditProductDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>450</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Редактирование товара</string>
+  </property>
+  <property name="styleSheet">
+   <string>
+    QWidget {
+        background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, 
+                                    stop:0 #20b2aa, stop:1 #6a0dad);
+        font-family: Arial, sans-serif;
+    }
+    QLabel {
+        font-size: 14px;
+        color: white;
+        font-weight: bold;
+    }
+    QLineEdit, QTextEdit {
+        border: 2px solid white;
+        border-radius: 8px;
+        padding: 6px;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #333;
+    }
+    QPushButton {
+        background-color: #20b2aa;
+        color: white;
+        font-size: 14px;
+        border-radius: 10px;
+        padding: 8px;
+        border: 2px solid white;
+    }
+    QPushButton:hover {
+        background-color: #008b8b;
+        border: 2px solid #ffffff;
+    }
+   </string>
+  </property>
+
+  <!-- Main Layout for the dialog -->
+  <layout class="QVBoxLayout" name="verticalLayout">
+
+   <!-- Name Label and Input -->
+   <item>
+    <widget class="QLabel" name="label_name">
+     <property name="text">
+      <string>Название товара:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="name_input">
+     <property name="placeholderText">
+      <string>Введите название товара</string>
+     </property>
+    </widget>
+   </item>
+
+   <!-- Price Label and Input -->
+   <item>
+    <widget class="QLabel" name="label_price">
+     <property name="text">
+      <string>Цена (₽):</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="price_input">
+     <property name="placeholderText">
+      <string>Введите цену товара</string>
+     </property>
+    </widget>
+   </item>
+
+   <!-- Description Label and Input -->
+   <item>
+    <widget class="QLabel" name="label_description">
+     <property name="text">
+      <string>Описание:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="description_input">
+     <property name="placeholderText">
+      <string>Введите описание товара</string>
+     </property>
+    </widget>
+   </item>
+
+   <!-- Change Image Button -->
+   <item>
+    <widget class="QPushButton" name="change_image_button">
+     <property name="text">
+      <string>Изменить фото</string>
+     </property>
+    </widget>
+   </item>
+
+   <!-- Buttons Layout (Save and Cancel) -->
+   <item>
+    <layout class="QHBoxLayout" name="buttonLayout">
+     <item>
+      <widget class="QPushButton" name="save_button">
+       <property name="text">
+        <string>Сохранить</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancel_button">
+       <property name="text">
+        <string>Отмена</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

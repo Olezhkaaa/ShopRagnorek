@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RegisterWindow</class>
+ <widget class="QDialog" name="RegisterWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>294</width>
+    <height>325</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Регистрация</string>
+  </property>
+  <widget class="QWidget" name="registerWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>291</width>
+     <height>321</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string>
+     QWidget {
+        background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, 
+                                    stop:0 #20b2aa, stop:1 #6a0dad);
+        font-family: Arial, sans-serif;
+     }
+     QLabel#register_logo {
+        font-size: 26px;
+        font-weight: bold;
+        color: white;
+        background-color: #6a0dad;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+     }
+     QLineEdit {
+        border: 2px solid white;
+        border-radius: 10px;
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #333;
+     }
+     QPushButton {
+        background-color: #20b2aa;
+        color: white;
+        font-size: 14px;
+        border-radius: 10px;
+        padding: 8px;
+        border: 2px solid white;
+     }
+     QPushButton:hover {
+        background-color: #008b8b;
+        border: 2px solid #ffffff;
+     }
+    </string>
+   </property>
+   <layout class="QVBoxLayout" name="registerLayout">
+    <item>
+     <widget class="QLabel" name="register_logo">
+      <property name="text">
+       <string>РАГНАРЁК</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="register_login_field">
+      <property name="placeholderText">
+       <string>Логин</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="register_email_field">
+      <property name="placeholderText">
+       <string>Email</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="register_password_field">
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+      <property name="placeholderText">
+       <string>Пароль</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="register_button">
+      <property name="text">
+       <string>Зарегистрироваться</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
